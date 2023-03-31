@@ -5,4 +5,4 @@
 - 使用 typescript 构建，原生 js 让你更轻松的融合进你自己的项目
 - 支持多种格式 iife、umd
 
-demo: <https://gmero.github.io/Gmsg/>
+demo: <https://g-mero.github.io/Gmsg/>

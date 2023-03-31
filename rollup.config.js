@@ -10,9 +10,9 @@ import pkg from './package.json' assert { type: 'json' }
 
 export default [
   {
-    input: './src/main.ts',
+    input: 'src/main.ts',
     output: {
-      file: './test/index.js',
+      file: 'docs/index.js',
       format: 'iife',
       name: 'Gmsg',
       sourcemap: true,
@@ -39,7 +39,7 @@ export default [
         exclude: 'mode_modules/**',
       }),
       serve({
-        contentBase: ['test', 'lib'],
+        contentBase: ['docs', 'lib'],
       }),
     ],
   },

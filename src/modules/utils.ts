@@ -11,6 +11,7 @@ export interface UserSetting {
   maxNums?: number
   html?: boolean
   title?: string
+  iread?: () => void
 }
 
 // 单个msg的实例设置项
@@ -23,6 +24,8 @@ export interface Setting {
   onClose: (() => void) | null
   maxNums: number
   html: boolean
+  title?: string
+  iread?: () => void
 }
 
 // 浅拷贝

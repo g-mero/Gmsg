@@ -80,7 +80,6 @@ export class Gmsg {
     this.form = form
 
     if (form === 'notice') {
-      this.setting.autoClose = false
       this.setting.showClose = true
     }
   }
@@ -93,6 +92,9 @@ export class Gmsg {
     const params = config ? assignConfig(this.setting, config) : copyConfig(this.setting)
     params.type = 'info'
     params.content = txt
+    if (params.iread) {
+      params.autoClose = false
+    }
     return judgeReMsg.call(this, params)
   }
 
@@ -100,6 +102,9 @@ export class Gmsg {
     const params = config ? assignConfig(this.setting, config) : copyConfig(this.setting)
     params.type = 'warning'
     params.content = txt
+    if (params.iread) {
+      params.autoClose = false
+    }
     return judgeReMsg.call(this, params)
   }
 
@@ -107,6 +112,9 @@ export class Gmsg {
     const params = config ? assignConfig(this.setting, config) : copyConfig(this.setting)
     params.type = 'success'
     params.content = txt
+    if (params.iread) {
+      params.autoClose = false
+    }
     return judgeReMsg.call(this, params)
   }
 
@@ -114,6 +122,9 @@ export class Gmsg {
     const params = config ? assignConfig(this.setting, config) : copyConfig(this.setting)
     params.type = 'error'
     params.content = txt
+    if (params.iread) {
+      params.autoClose = false
+    }
 
     return judgeReMsg.call(this, params)
   }
